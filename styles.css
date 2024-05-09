@@ -1,0 +1,110 @@
+:root {
+    /* Colors */
+    --violet: hsl(263, 55%, 52%);
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+    --blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+    /* Typography */
+    --ff-Barlow: "Barlow Semi Condensed";
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--light-grayish-blue);
+    font-family: var(--ff-Barlow);
+    margin: 2rem;
+}
+
+grid-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid-item {
+    padding: 2rem;
+    border-radius: 10px;
+    color: var(--light-gray);
+}
+
+.profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+ 
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 1px solid var(--light-gray);
+    height: 25px;
+}
+
+.info-name {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.info-role {
+    font-size: 0.6rem;
+}
+
+.content {
+    margin: 1rem 0;
+}
+
+.content_title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.content_text {
+    font-size: 0.8rem;
+}
+
+/*variations*/
+.card-violet {
+    background-color: var(--violet);
+}
+.card-gray {
+    background-color: var(--dark-grayish-blue);
+}
+.card-white {
+    background-color: var(--white);
+    color: var(--blackish-blue)
+}
+
+.card-black {
+    background-color: var(--blackish-blue);
+}
+
+/* Card placing with grid*/
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+.grid-row-span-2 {
+    grid-column-start: 4;
+    grid-row: 1/ span 2;
+}
+
+/*Media Queries*/
+
+@media (min-width: 50em) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
